@@ -6,7 +6,7 @@ const BannerItem = ({ slide }) => {
     const { image, id, prev, next } = slide;
 
     return (
-        <div id={`slide${id}`} className="carousel-item relative w-full h-96">
+        <div id={`slide${id}`} className="carousel-item relative w-full max-h-screen">
             <div className='carousel-img'>
                 <img src={image} alt="" className="w-full rounded-xl" />
             </div>
