@@ -7,7 +7,7 @@ import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 const SignIn = () => {
     const [error, setError] = useState('');
 
-    const { signIn, setLoading, providerLogin, gitProviderLogin } = useContext(AuthContext);
+    const { signIn, setLoading, providerLogin, } = useContext(AuthContext);
 
     const navigate = useNavigate();
     const location = useLocation();
