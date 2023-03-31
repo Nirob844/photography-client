@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import AddReview from './Review/AddReview';
 
 const ServiceCart = ({ service }) => {
 
@@ -7,7 +8,7 @@ const ServiceCart = ({ service }) => {
 
 
     return (
-        <div className="w-4/5 mx-auto py-30 card card-compact w-96 bg-base-100 shadow-xl">
+        <div className="w-4/5 mx-auto py-30 card card-compact  bg-base-100 shadow-xl">
             <figure><img src={url} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{title}</h2>
@@ -19,6 +20,7 @@ const ServiceCart = ({ service }) => {
                     </Link>
                 </div>
             </div>
+            <AddReview></AddReview>
         </div>
     );
 

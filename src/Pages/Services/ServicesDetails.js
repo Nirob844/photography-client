@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import AddReview from './Review/AddReview';
 
 const ServicesDetails = () => {
     const servicesDetails = useLoaderData();
@@ -8,7 +9,7 @@ const ServicesDetails = () => {
 
     return (
         <div className=''>
-            <div className="h-96 w-full carousel carousel-vertical rounded-box">
+            <div className="mt-5 h-96 w-full carousel carousel-vertical rounded-box">
                 <div className="carousel-item h-full">
                     <img className='w-full' src={url} alt="Shoes" />
                 </div>
@@ -23,6 +24,7 @@ const ServicesDetails = () => {
                 </div>
                 <p>{description}</p>
             </div>
+            <AddReview></AddReview>
         </div>
     );
 };
