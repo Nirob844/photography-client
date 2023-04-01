@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import AddReview from './Review/AddReview';
+
 
 const ServiceCart = ({ service }) => {
 
@@ -20,7 +20,7 @@ const ServiceCart = ({ service }) => {
                     </Link>
                 </div>
             </div>
-            <AddReview></AddReview>
+
         </div>
     );
 

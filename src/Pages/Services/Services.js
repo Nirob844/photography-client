@@ -1,6 +1,6 @@
 import { useLoaderData } from 'react-router-dom';
 import ServiceCart from './ServiceCart';
-import AddReview from './Review/AddReview';
+
 
 const Services = () => {
 
@@ -15,7 +15,7 @@ const Services = () => {
                     service={service}
                 ></ServiceCart>)
             }
-            <AddReview></AddReview>
+            
         </div>
     );
 };
