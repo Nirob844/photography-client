@@ -19,7 +19,17 @@ const Header = () => {
         <li><Link to="/about">About</Link></li>
         {user?.uid ?
             <>
-                <li><button onClick={handleLogOut}>Sign out</button></li>
+                <li className='lg:hidden'><button onClick={handleLogOut}>Sign out</button></li>
+                <div className="dropdown dropdown-end">
+                    <label tabIndex={0} className="">
+                        <img className='w-10 h-10 rounded-full' src={user?.photoURL} alt="" />
+                    </label>
+                    <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 w-32">
+                        <li><Link to="/my-service">My service</Link></li>
+                        <li><Link to="/my-review">My review</Link></li>
+                        <li><button onClick={handleLogOut}>Sign out</button></li>
+                    </ul>
+                </div>
             </>
             :
             <>
@@ -51,17 +61,7 @@ const Header = () => {
                             </ul>
                         </div>
 
-                        <label htmlFor="dashboard-drawer" tabIndex={2} className="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
-                            </svg>
-                        </label>
                     </div>
-                    <button className="p-4 lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 text-gray-100">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
                 </div>
             </header>
         </div>
