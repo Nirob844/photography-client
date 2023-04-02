@@ -11,13 +11,18 @@ const Reviews = () => {
 
 
     return (
-        <div className='m-3/4 text-center mx-auto'>
-            {
-                reviews.map(revw => <Review
-                    key={reviews._id}
-                    revw={revw}
-                ></Review>)
-            }
+        <div className=' w-3/4 mx-auto  '>
+            <h1 className='text-center text-2xl font-semibold'>
+                All review
+            </h1>
+            <div className='my-3 ml-12'>
+                {
+                    reviews.map(revw => <Review
+                        key={reviews._id}
+                        revw={revw}
+                    ></Review>)
+                }
+            </div>
         </div>
     );
 };
