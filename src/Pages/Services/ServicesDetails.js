@@ -3,6 +3,9 @@ import { useLoaderData } from 'react-router-dom';
 import AddReview from './Review/AddReview';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import UserRequired from './Review/UserRequired';
+import { PhotoView } from 'react-photo-view';
+import Reviews from './Review/Reviews';
+
 
 
 const ServicesDetails = () => {
@@ -13,10 +16,17 @@ const ServicesDetails = () => {
     return (
         <div>
             <div className=''>
+
                 <div className="mt-5 h-96 w-full carousel carousel-vertical rounded-box">
                     <div className="carousel-item h-full">
                         <img className='w-full' src={url} alt="Shoes" />
                     </div>
+                    {/* <div>
+
+                        <PhotoView src={url}>
+                            <img src={url} style={{ objectFit: 'cover' }} alt="Shoes" />
+                        </PhotoView>
+                    </div> */}
 
                 </div>
                 <div className='my-10 w-3/4 mx-auto p-5 shadow-2xl'>
@@ -27,6 +37,9 @@ const ServicesDetails = () => {
 
                     </div>
                     <p>{description}</p>
+                </div>
+                <div>
+                    <Reviews></Reviews>
                 </div>
                 <div>
                     {user ? (

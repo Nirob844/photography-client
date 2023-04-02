@@ -15,7 +15,7 @@ const Services = () => {
                     service={service}
                 ></ServiceCart>)
             }
-            
+
         </div>
     );
 };

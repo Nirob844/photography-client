@@ -1,6 +1,7 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { AuthContext } from "../../../context/AuthProvider/AuthProvider";
 import { toast } from "react-hot-toast";
+
 
 
 const AddReview = ({ serviceId, serviceName }) => {
@@ -22,26 +23,25 @@ const AddReview = ({ serviceId, serviceName }) => {
             name: user.displayName,
             uid: user.uid,
             image: user.photoURL,
-            reviewTime: new Date().toLocaleString(),
         };
 
-        fetch(`/add-review`, {
+        fetch('http://localhost:5000/add-review', {
             method: "POST",
             headers: {
                 "content-type": "application/json",
             },
             body: JSON.stringify(newReview),
         })
-            .then((res) => res.json())
-            .then((data) => {
-                if (data.success) {
-                    toast.success(data.message);
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.acknowledged) {
+                    toast.success(' successfully')
                     e.target.reset();
-                } else {
-                    toast.error(data.error);
                 }
             })
-            .catch((error) => toast.error(error.message));
+            .catch(er => console.error(er.message));
+
     };
 
     return (
