@@ -8,7 +8,7 @@ const MyReviews = () => {
     useEffect(() => {
         fetch(`http://localhost:5000/add-review?email=${user?.email}`, {
             headers: {
-                authorization: `Bearer ${localStorage.getItem('genius-token')}`
+                authorization: `Bearer ${localStorage.getItem('user-token')}`
             }
         })
             .then(res => {
@@ -23,7 +23,7 @@ const MyReviews = () => {
     }, [user?.email, logOut])
     return (
         <div>
-
+            <p>review:{myReviews.length}</p>
         </div>
     );
 };

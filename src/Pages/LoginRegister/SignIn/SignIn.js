@@ -54,9 +54,10 @@ const SignIn = () => {
                 }
 
                 console.log(currentUser);
+                toast.success('sign in successful')
 
                 // get jwt token
-                fetch('http://localhost:5000//jwt', {
+                fetch('http://localhost:5000/jwt', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

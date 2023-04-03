@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import Review from './Review';
 
+
 const Reviews = () => {
+
     const [reviews, setReviews] = useState([])
     useEffect(() => {
         fetch('http://localhost:5000/add-review')
             .then(res => res.json())
-            .then(data => setReviews(data));
+            .then(data => {
+                setReviews(data);
+            })
     }, [])
-
+    console.log(reviews);
 
     return (
         <div className=' w-3/4 mx-auto  '>
