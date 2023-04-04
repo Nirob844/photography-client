@@ -4,12 +4,11 @@ import About from "../../Pages/About/About";
 import Home from "../../Pages/Home/Home/Home";
 import SignIn from "../../Pages/LoginRegister/SignIn/SignIn";
 import SignUp from "../../Pages/LoginRegister/SignUp/SignUp";
-import ServiceCart from "../../Pages/Services/ServiceCart";
 import Services from "../../Pages/Services/Services";
 import ServicesDetails from "../../Pages/Services/ServicesDetails";
 import PrivateRoutes from "../PrivateRouts/PrivateRoutes";
 import MyReviews from "../../Pages/Dashboard/MyReviews/MyReviews";
-import AddService from "../../Pages/Dashboard/AddService/AddService";
+import AddServices from "../../Pages/Dashboard/AddService/AddServices";
 
 const router = createBrowserRouter([
     {
@@ -49,7 +48,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/add-services',
-                element: <PrivateRoutes><AddService></AddService></PrivateRoutes>,
+                element: <PrivateRoutes><AddServices></AddServices></PrivateRoutes>,
             },
 
         ]
