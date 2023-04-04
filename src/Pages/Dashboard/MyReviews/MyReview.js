@@ -1,7 +1,7 @@
 import React from 'react';
 
-const MyReview = ({ myReview }) => {
-    const { image, serviceName, name, review } = myReview
+const MyReview = ({ myReview, handleDelete, handleStatusUpdate }) => {
+    const { _id, image, serviceName, name, review } = myReview
     return (
         <div className='my-3 shadow-2xl p-3'>
             <div className='flex justify-between'>
@@ -13,8 +13,8 @@ const MyReview = ({ myReview }) => {
                     </div>
                 </div>
                 <div className=''>
-                    <button className='btn btn-sm btn-outline btn-warning mr-3'>edit</button>
-                    <button className='btn btn-sm btn-outline btn-error'>delete</button>
+                    <button onClick={() => handleStatusUpdate(_id)} className='btn btn-sm btn-outline btn-warning mr-3'>edit</button>
+                    <button onClick={() => handleDelete(_id)} className='btn btn-sm btn-outline btn-error'>delete</button>
                 </div>
             </div>
             <hr />
