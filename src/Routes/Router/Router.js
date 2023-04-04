@@ -9,6 +9,7 @@ import ServicesDetails from "../../Pages/Services/ServicesDetails";
 import PrivateRoutes from "../PrivateRouts/PrivateRoutes";
 import MyReviews from "../../Pages/Dashboard/MyReviews/MyReviews";
 import AddServices from "../../Pages/Dashboard/AddService/AddServices";
+import SlowService from "../../Pages/Dashboard/AddService/SlowService";
 
 const router = createBrowserRouter([
     {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
             {
                 path: '/my-reviews',
                 element: <PrivateRoutes><MyReviews></MyReviews></PrivateRoutes>,
+            },
+            {
+                path: '/slow-services',
+                element: <PrivateRoutes><SlowService></SlowService></PrivateRoutes>,
             },
             {
                 path: '/add-services',

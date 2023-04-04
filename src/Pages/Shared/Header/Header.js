@@ -25,7 +25,7 @@ const Header = () => {
                         <img className='w-10 h-10 rounded-full' src={user?.photoURL} alt="" />
                     </label>
                     <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 w-32">
-                        <li><Link to="/add-services">My service</Link></li>
+                        <li><Link to="/slow-services">My service</Link></li>
                         <li><Link to="/my-reviews">My review</Link></li>
                         <li><button onClick={handleLogOut}>Sign out</button></li>
                     </ul>
