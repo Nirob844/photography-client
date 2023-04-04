@@ -21,6 +21,7 @@ const AddReview = ({ serviceId, serviceName }) => {
             serviceName,
             review,
             name: user.displayName,
+            email: user.email,
             uid: user.uid,
             image: user.photoURL,
         };
