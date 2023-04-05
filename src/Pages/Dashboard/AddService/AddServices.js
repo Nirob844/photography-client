@@ -11,12 +11,14 @@ const AddServices = () => {
         const title = e.target.title.value;
         const price = Number(e.target.price.value);
         const description = e.target.description.value;
+        const email = e.target.email.value;
         const url = e.target.url.value;
 
         const newData = {
             title,
             price,
             description,
+            email,
             url,
             rating: 0,
         };
@@ -56,7 +58,7 @@ const AddServices = () => {
                 </div>
                 <textarea name="description" className="textarea textarea-bordered h-24 w-full" placeholder="Service Details" required></textarea>
 
-                <input className='btn btn-warning my-5' type="submit" value="Place Your Order" />
+                <input className='btn btn-warning my-5' type="submit" value="Add Service" />
             </form>
         </div>
     );

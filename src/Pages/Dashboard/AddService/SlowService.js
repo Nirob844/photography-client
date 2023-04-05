@@ -48,7 +48,7 @@ const SlowService = () => {
 
     return (
         <div>
-            <Link to='/add-services'><button>add new service</button></Link>
+            <Link to='/add-services'><button className='btn m-10 flex justify-center mx-auto'>add new service</button></Link>
 
             <div className='my-3 ml-12'>
                 {
