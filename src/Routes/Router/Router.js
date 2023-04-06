@@ -10,6 +10,7 @@ import PrivateRoutes from "../PrivateRouts/PrivateRoutes";
 import MyReviews from "../../Pages/Dashboard/MyReviews/MyReviews";
 import AddServices from "../../Pages/Dashboard/AddService/AddServices";
 import SlowService from "../../Pages/Dashboard/AddService/SlowService";
+import Blogs from "../../Pages/Blogs/Blogs";
 
 const router = createBrowserRouter([
     {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
             {
                 path: '/about',
                 element: <About></About>
+            },
+            {
+                path: '/blog',
+                element: <Blogs></Blogs>
             },
             {
                 path: '/register',
