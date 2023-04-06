@@ -10,7 +10,7 @@ const SlowService = () => {
     const [slowService, setSlowService] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/user-service?email=${user?.email}`, {
+        fetch(`https://photography-server-five.vercel.app/user-service?email=${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('user-token')}`
             }
@@ -31,7 +31,7 @@ const SlowService = () => {
         console.log('count');
         const proceed = window.confirm('Are you sure, you want to delete this review');
         if (proceed) {
-            fetch(`http://localhost:5000/user-service/${id}`, {
+            fetch(`https://photography-server-five.vercel.app/user-service/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

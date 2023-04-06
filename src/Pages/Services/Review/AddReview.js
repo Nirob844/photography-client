@@ -26,7 +26,7 @@ const AddReview = ({ serviceId, serviceName }) => {
             image: user.photoURL,
         };
 
-        fetch('http://localhost:5000/add-review', {
+        fetch('https://photography-server-five.vercel.app/add-review', {
             method: "POST",
             headers: {
                 "content-type": "application/json",

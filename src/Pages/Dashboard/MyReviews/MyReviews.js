@@ -8,7 +8,7 @@ const MyReviews = () => {
     const { user, logOut } = useContext(AuthContext)
     const [myReviews, setMyReviews] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/user-review?email=${user?.email}`, {
+        fetch(`https://photography-server-five.vercel.app/user-review?email=${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('user-token')}`
             }
@@ -29,7 +29,7 @@ const MyReviews = () => {
         console.log('count');
         const proceed = window.confirm('Are you sure, you want to delete this review');
         if (proceed) {
-            fetch(`http://localhost:5000/user-review/${id}`, {
+            fetch(`https://photography-server-five.vercel.app/user-review/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -45,7 +45,7 @@ const MyReviews = () => {
     }
 
     const handleStatusUpdate = id => {
-        fetch(`http://localhost:5000/user-review/${id}`, {
+        fetch(`https://photography-server-five.vercel.app/user-review/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

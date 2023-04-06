@@ -6,7 +6,7 @@ const HomeServices = () => {
 
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/services?limit=3&page=1')
+        fetch('https://photography-server-five.vercel.app/services?limit=3&page=1')
             .then((res) => res.json())
             .then((data) => {
                 setServices(data);

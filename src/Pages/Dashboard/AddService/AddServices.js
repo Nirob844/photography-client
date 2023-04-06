@@ -20,10 +20,9 @@ const AddServices = () => {
             description,
             email,
             url,
-            rating: 0,
         };
 
-        fetch('http://localhost:5000/add-service', {
+        fetch('https://photography-server-five.vercel.app/add-service', {
             method: "POST",
             headers: {
                 "content-type": "application/json",
